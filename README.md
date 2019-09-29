@@ -1,2 +1,2 @@
 # LinearRegression
-Linear Regression with all functionalities of lm
+Implementation of Linear Regression model in R using OOP

@@ -1,0 +1,19 @@
+Package: LinearRegression
+Type: Package
+Title: Package calculates different functions of Linear Regression Like Coefficients, Residuals, Variance, Residual Variance, Degree of Freedom
+Version: 0.1.0
+Author: Asad Enver, Rana Fahad
+Maintainer: Asad Enver <Asad.env@gmail.com>
+Description: The function linreg calcultes vaious parameters that are required to perform linear regression on a given dataset)
+    After performing the calculations, we store the variables in a given object whose class is set to linreg.
+	Next, we write methods for our class linreg including print(), plot(), coef(), residual(), pred(), summary() and also
+    wrote generic method for pred(). 	
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Imports:
+    ggplot2,
+    gridExtra,
+	  png,
+	  RCurl
