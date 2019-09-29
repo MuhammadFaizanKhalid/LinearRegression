@@ -6,8 +6,8 @@
 #' to find out Regression Coefficients and other factors
 #' @return the list of different objects of Linreg class
 #' @examples
-#' Linreg(Petal.Length~Sepal.Width+Sepal.Length,iris)
-#' Linreg(Petal.Length ~ Sepal.Length,iris)
+#' linreg(Petal.Length~Sepal.Width+Sepal.Length,iris)
+#' linreg(Petal.Length ~ Sepal.Length,iris)
 #' @export
 
 linreg <- function(formula,data){

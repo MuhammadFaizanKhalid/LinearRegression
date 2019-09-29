@@ -1,0 +1,78 @@
+---
+title: "Package LinearRegresion"
+author: "Muhammad Faizan, Fahed Maqbol, Asad Enver"
+date: "September 29, 2019"
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+  html_document:
+    toc: true
+    toc_depth: 2
+vignette: >
+  %\VignetteIndexEntry{Linreg}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r iris, include=FALSE}
+data(iris)
+library(linreg)
+```
+
+## Introduction
+This package calculates **multiple linear regression**  for a given data set. The OOP approach used is S3 in R.
+First, we calculate all the parameters we need to caclulate the required coefficients. After that, all the parameters are stored in a an object whose class is set to linreg and the function linreg returns that object. We then write methods for our class linreg to display the coefficients of our interest. 
+
+The following functions are present in the package:
+
+* #### linreg():
+  The function **linreg()** takes two arguments formula and data and returns n object of class linreg. The object    is a list with all the required calculations necessary to perform linear regression.
+    + Example:
+        ``` {r res}
+        res <- linreg$new(Petal.Length~Species, data = iris)
+        ```
+* #### print():
+  The print function displays coefficients along with their names
+    + Example:
+        ``` {r print,message=FALSE, warning=FALSE}
+        res$print()
+        ```
+* #### plot():
+  The plot function displays two plots:
+    * ##### Fitted Values v/s Residuals
+    * ##### Fitted Values v/s Standardise Residulas
+      > Example:
+          ``` {r plot, echo=FALSE,message=FALSE, warning=FALSE}
+          res$plot()
+          ```
+* #### resid():
+  The resid function returns the vector of residuals
+    + Example:
+        ``` {r resid,message=FALSE, warning=FALSE}
+        res$resid()
+        ```
+* #### pred():
+  The pred function returns the predicted values ŷ
+    + Example:
+        ``` {r pred,message=FALSE, warning=FALSE}
+        res$pred()
+        ```
+
+* #### coef():
+  The coef function returns the coefficients as a named vector
+    + Example:
+        ``` {r coef,message=FALSE, warning=FALSE}
+        res$coef()
+        ```
+
+* #### summary():
+  This function presents the coefficients with their standard error, t-value and p-value as well as the estimate of   σ and the degrees of freedom in the model.
+
+    + Example:
+        ``` {r summary,message=FALSE, warning=FALSE}
+        res$summary()
+        ```
