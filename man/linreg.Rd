@@ -22,6 +22,6 @@ Linreg function for Linear Regression
 to perform different calculations for Linear Regression
 }
 \examples{
-Linreg(Petal.Length~Sepal.Width+Sepal.Length,iris)
-Linreg(Petal.Length ~ Sepal.Length,iris)
+linreg(Petal.Length~Sepal.Width+Sepal.Length,iris)
+linreg(Petal.Length ~ Sepal.Length,iris)
 }
